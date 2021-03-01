@@ -33,6 +33,10 @@ class Index extends Action implements HttpGetActionInterface
      */
     public function execute(): Page
     {
-        return $this->pageFactory->create();
+        $page = $this->pageFactory->create();
+        $page->setActiveMenu('Macademy_Minerva::faq');
+        $page->getConfig()->getTitle()->prepend(__('FAQs'));
+
+        return $page;
     }
 }
