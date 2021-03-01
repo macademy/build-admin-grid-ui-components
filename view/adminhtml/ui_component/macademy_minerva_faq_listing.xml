@@ -34,5 +34,25 @@
                 <label translate="true">Question</label>
             </settings>
         </column>
+        <column name="answer">
+            <settings>
+                <label translate="true">Answer</label>
+            </settings>
+        </column>
+        <column name="is_published">
+            <settings>
+                <label translate="true">Is Published</label>
+            </settings>
+        </column>
+        <column name="created_at">
+            <settings>
+                <label translate="true">Created at</label>
+            </settings>
+        </column>
+        <column name="updated_at">
+            <settings>
+                <label translate="true">Updated at</label>
+            </settings>
+        </column>
     </columns>
 </listing>
