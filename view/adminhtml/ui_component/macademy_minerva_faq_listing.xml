@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">macademy_minerva_faq_listing.macademy_minerva_faq_listing_data_source</item>
+        </item>
+    </argument>
+    <settings>
+        <deps>
+            <dep>macademy_minerva_faq_listing.macademy_minerva_faq_listing_data_source</dep>
+        </deps>
+        <spinner>macademy_minerva_faq_columns</spinner>
+    </settings>
+    <dataSource name="macademy_minerva_faq_listing_data_source" component="Magento_Ui/js/grid/provider">
+        <settings>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <aclResource>Macademy_Minerva::faq</aclResource>
+        <dataProvider name="macademy_minerva_faq_listing_data_source" class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <columns name="macademy_minerva_faq_columns">
+        <column name="id">
+            <settings>
+                <label translate="true">ID</label>
+            </settings>
+        </column>
+        <column name="question">
+            <settings>
+                <label translate="true">Question</label>
+            </settings>
+        </column>
+    </columns>
+</listing>
