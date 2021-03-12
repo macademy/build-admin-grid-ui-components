@@ -29,6 +29,7 @@
         </settings>
         <paging name="listing_paging"/>
         <columnsControls name="columns_controls"/>
+        <bookmark name="bookmarks"/>
     </listingToolbar>
     <columns name="macademy_minerva_faq_columns">
         <settings>
