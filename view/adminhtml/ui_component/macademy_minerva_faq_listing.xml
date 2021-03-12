@@ -64,6 +64,7 @@
                 <label translate="true">Is Published</label>
                 <options class="Magento\Config\Model\Config\Source\Yesno"/>
                 <dataType>select</dataType>
+                <sorting>desc</sorting>
             </settings>
         </column>
         <column name="created_at" component="Magento_Ui/js/grid/columns/date">
