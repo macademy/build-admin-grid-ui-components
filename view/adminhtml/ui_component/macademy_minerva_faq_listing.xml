@@ -23,6 +23,13 @@
             </settings>
         </dataProvider>
     </dataSource>
+    <listingToolbar name="listing_top">
+        <settings>
+            <sticky>true</sticky>
+        </settings>
+        <paging name="listing_paging"/>
+        <columnsControls name="columns_controls"/>
+    </listingToolbar>
     <columns name="macademy_minerva_faq_columns">
         <settings>
             <childDefaults>
