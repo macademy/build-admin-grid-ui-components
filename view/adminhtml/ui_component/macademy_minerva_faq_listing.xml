@@ -14,6 +14,9 @@
     <dataSource name="macademy_minerva_faq_listing_data_source" component="Magento_Ui/js/grid/provider">
         <settings>
             <updateUrl path="mui/index/render"/>
+            <storageConfig>
+                <param name="indexField" xsi:type="string">id</param>
+            </storageConfig>
         </settings>
         <aclResource>Macademy_Minerva::faq</aclResource>
         <dataProvider name="macademy_minerva_faq_listing_data_source" class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
@@ -30,6 +33,7 @@
         <paging name="listing_paging"/>
         <columnsControls name="columns_controls"/>
         <bookmark name="bookmarks"/>
+        <filters name="listing_filters"/>
     </listingToolbar>
     <columns name="macademy_minerva_faq_columns">
         <settings>
@@ -47,16 +51,19 @@
         <column name="id">
             <settings>
                 <label translate="true">ID</label>
+                <filter>textRange</filter>
             </settings>
         </column>
         <column name="question">
             <settings>
                 <label translate="true">Question</label>
+                <filter>text</filter>
             </settings>
         </column>
         <column name="answer">
             <settings>
                 <label translate="true">Answer</label>
+                <filter>text</filter>
             </settings>
         </column>
         <column name="is_published" component="Magento_Ui/js/grid/columns/select">
@@ -65,16 +72,19 @@
                 <options class="Magento\Config\Model\Config\Source\Yesno"/>
                 <dataType>select</dataType>
                 <sorting>desc</sorting>
+                <filter>select</filter>
             </settings>
         </column>
         <column name="created_at" component="Magento_Ui/js/grid/columns/date">
             <settings>
                 <label translate="true">Created at</label>
+                <filter>dateRange</filter>
             </settings>
         </column>
         <column name="updated_at" component="Magento_Ui/js/grid/columns/date">
             <settings>
                 <label translate="true">Updated at</label>
+                <filter>dateRange</filter>
             </settings>
         </column>
         <actionsColumn name="actions" class="Macademy\Minerva\Ui\Component\Listing\Column\Actions"/>
