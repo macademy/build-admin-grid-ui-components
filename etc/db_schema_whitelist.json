@@ -10,6 +10,9 @@
         },
         "constraint": {
             "PRIMARY": true
+        },
+        "index": {
+            "MACADEMY_MINERVA_FAQ_QUESTION": true
         }
     }
 }

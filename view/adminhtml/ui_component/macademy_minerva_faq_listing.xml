@@ -42,6 +42,7 @@
                 </item>
             </argument>
         </filters>
+        <filterSearch name="fulltext"/>
     </listingToolbar>
     <columns name="macademy_minerva_faq_columns">
         <settings>
