@@ -33,7 +33,15 @@
         <paging name="listing_paging"/>
         <columnsControls name="columns_controls"/>
         <bookmark name="bookmarks"/>
-        <filters name="listing_filters"/>
+        <filters name="listing_filters">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="applied" xsi:type="array">
+                        <item name="is_published" xsi:type="string">1</item>
+                    </item>
+                </item>
+            </argument>
+        </filters>
     </listingToolbar>
     <columns name="macademy_minerva_faq_columns">
         <settings>
