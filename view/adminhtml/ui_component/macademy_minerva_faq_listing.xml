@@ -56,15 +56,29 @@
         <settings>
             <childDefaults>
                 <param name="fieldAction" xsi:type="array">
-                    <item name="provider" xsi:type="string">macademy_minerva_faq_listing.macademy_minerva_faq_listing.macademy_minerva_faq_columns.actions</item>
-                    <item name="target" xsi:type="string">applyAction</item>
+                    <item name="provider" xsi:type="string">macademy_minerva_faq_listing.macademy_minerva_faq_listing.macademy_minerva_faq_columns_editor</item>
+                    <item name="target" xsi:type="string">startEdit</item>
                     <item name="params" xsi:type="array">
-                        <item name="0" xsi:type="string">edit</item>
-                        <item name="1" xsi:type="string">${ $.$data.rowIndex }</item>
+                        <item name="0" xsi:type="string">${ $.$data.rowIndex }</item>
+                        <item name="1" xsi:type="boolean">true</item>
                     </item>
                 </param>
             </childDefaults>
+            <editorConfig>
+                <param name="clientConfig" xsi:type="array">
+                    <item name="saveUrl" xsi:type="url" path="*/*/inlineEdit"/>
+                    <item name="validateBeforeSave" xsi:type="boolean">false</item>
+                </param>
+                <param name="selectProvider" xsi:type="string">macademy_minerva_faq_listing.macademy_minerva_faq_listing.macademy_minerva_faq_columns.ids</param>
+                <param name="indexField" xsi:type="string">id</param>
+                <param name="enabled" xsi:type="boolean">true</param>
+            </editorConfig>
         </settings>
+        <selectionsColumn name="ids">
+            <settings>
+                <indexField>id</indexField>
+            </settings>
+        </selectionsColumn>
         <column name="id">
             <settings>
                 <label translate="true">ID</label>
@@ -75,12 +89,24 @@
             <settings>
                 <label translate="true">Question</label>
                 <filter>text</filter>
+                <editor>
+                    <editorType>text</editorType>
+                    <validation>
+                        <rule name="required-entry" xsi:type="boolean">true</rule>
+                    </validation>
+                </editor>
             </settings>
         </column>
         <column name="answer">
             <settings>
                 <label translate="true">Answer</label>
                 <filter>text</filter>
+                <editor>
+                    <editorType>text</editorType>
+                    <validation>
+                        <rule name="required-entry" xsi:type="boolean">true</rule>
+                    </validation>
+                </editor>
             </settings>
         </column>
         <column name="is_published" component="Magento_Ui/js/grid/columns/select">
@@ -90,6 +116,12 @@
                 <dataType>select</dataType>
                 <sorting>desc</sorting>
                 <filter>select</filter>
+                <editor>
+                    <editorType>select</editorType>
+                    <validation>
+                        <rule name="required-entry" xsi:type="boolean">true</rule>
+                    </validation>
+                </editor>
             </settings>
         </column>
         <column name="created_at" component="Magento_Ui/js/grid/columns/date">
