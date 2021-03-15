@@ -4,6 +4,14 @@
         <item name="js_config" xsi:type="array">
             <item name="provider" xsi:type="string">macademy_minerva_faq_listing.macademy_minerva_faq_listing_data_source</item>
         </item>
+        <item name="buttons" xsi:type="array">
+            <item name="add" xsi:type="array">
+                <item name="name" xsi:type="string">add</item>
+                <item name="label" xsi:type="string" translate="true">Add New FAQ</item>
+                <item name="url" xsi:type="string">minerva/faq/new</item>
+                <item name="class" xsi:type="string">primary</item>
+            </item>
+        </item>
     </argument>
     <settings>
         <deps>
