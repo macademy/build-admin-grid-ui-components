@@ -51,6 +51,23 @@
             </argument>
         </filters>
         <filterSearch name="fulltext"/>
+        <massaction name="listing_massaction" component="Magento_Ui/js/grid/tree-massactions">
+            <settings>
+                <selectProvider>macademy_minerva_faq_listing.macademy_minerva_faq_listing.macademy_minerva_faq_columns.ids</selectProvider>
+                <indexField>id</indexField>
+            </settings>
+            <action name="delete">
+                <settings>
+                    <type>delete</type>
+                    <label translate="true">Delete</label>
+                    <url path="*/*/massDelete"/>
+                    <confirm>
+                        <title translate="true">Delete items</title>
+                        <message translate="true">Are you sure you want to delete the selected items?</message>
+                    </confirm>
+                </settings>
+            </action>
+        </massaction>
     </listingToolbar>
     <columns name="macademy_minerva_faq_columns">
         <settings>
