@@ -54,6 +54,10 @@ class Actions extends Column
                         'id' => $item['id'],
                     ]),
                     'label' => __('Delete'),
+                    'confirm' => [
+                        'title' => __('Delete %1',  $item['question']),
+                        'message' => __('Are you sure you want to delete the "%1" record?', $item['question']),
+                    ],
                 ],
             ];
         }
