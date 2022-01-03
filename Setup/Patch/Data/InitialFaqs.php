@@ -6,7 +6,6 @@ use Macademy\Minerva\Model\ResourceModel\Faq;
 use Magento\Framework\App\ResourceConnection;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
-use Magento\Framework\Setup\Patch\PatchInterface;
 
 class InitialFaqs implements DataPatchInterface
 {
