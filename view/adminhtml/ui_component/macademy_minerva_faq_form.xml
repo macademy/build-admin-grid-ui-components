@@ -3,4 +3,8 @@
     <argument name="data" xsi:type="array">
         <item name="template" xsi:type="string">templates/form/collapsible</item>
     </argument>
+    <settings>
+        <namespace>macademy_minerva_faq_form</namespace>
+        <dataScope>data</dataScope>
+    </settings>
 </form>
