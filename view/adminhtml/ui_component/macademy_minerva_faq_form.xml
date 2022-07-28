@@ -1,11 +1,17 @@
 <?xml version="1.0"?>
 <form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">macademy_minerva_faq_form.macademy_minerva_faq_data_source</item>
+        </item>
         <item name="template" xsi:type="string">templates/form/collapsible</item>
     </argument>
     <settings>
         <namespace>macademy_minerva_faq_form</namespace>
         <dataScope>data</dataScope>
+        <deps>
+            <dep>macademy_minerva_faq_form.macademy_minerva_faq_data_source</dep>
+        </deps>
     </settings>
     <dataSource name="macademy_minerva_faq_data_source">
         <argument name="data" xsi:type="array">
