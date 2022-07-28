@@ -7,4 +7,17 @@
         <namespace>macademy_minerva_faq_form</namespace>
         <dataScope>data</dataScope>
     </settings>
+    <dataSource name="macademy_minerva_faq_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+        <dataProvider class="Macademy\Minerva\Ui\DataProvider\Faq" name="macademy_minerva_faq_data_source">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
 </form>
