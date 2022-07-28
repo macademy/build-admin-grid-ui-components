@@ -41,5 +41,17 @@
                 <label translate="true">Answer</label>
             </settings>
         </field>
+        <field name="is_published" formElement="select">
+            <settings>
+                <label translate="true">Is Published?</label>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options class="Magento\Config\Model\Config\Source\Yesno"/>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
     </fieldset>
 </form>
