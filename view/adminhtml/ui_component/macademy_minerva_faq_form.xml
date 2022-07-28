@@ -26,4 +26,20 @@
             </settings>
         </dataProvider>
     </dataSource>
+    <fieldset name="macademy_minerva_faq_fieldset">
+        <settings>
+            <label/>
+        </settings>
+        <field name="id" formElement="hidden"/>
+        <field name="question" formElement="input">
+            <settings>
+                <label translate="true">Question</label>
+            </settings>
+        </field>
+        <field name="answer" formElement="input">
+            <settings>
+                <label translate="true">Answer</label>
+            </settings>
+        </field>
+    </fieldset>
 </form>
