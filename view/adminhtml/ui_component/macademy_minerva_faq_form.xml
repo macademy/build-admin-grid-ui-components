@@ -8,6 +8,7 @@
     </argument>
     <settings>
         <buttons>
+            <button name="back" class="Macademy\Minerva\Block\Adminhtml\Faq\Edit\Button\Back"/>
             <button name="save" class="Macademy\Minerva\Block\Adminhtml\Faq\Edit\Button\Save"/>
         </buttons>
         <namespace>macademy_minerva_faq_form</namespace>
