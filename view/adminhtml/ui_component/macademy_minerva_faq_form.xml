@@ -41,16 +41,25 @@
         <field name="question" formElement="input">
             <settings>
                 <label translate="true">Question</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
             </settings>
         </field>
         <field name="answer" formElement="input">
             <settings>
                 <label translate="true">Answer</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
             </settings>
         </field>
         <field name="is_published" formElement="select">
             <settings>
                 <label translate="true">Is Published?</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
             </settings>
             <formElements>
                 <select>
